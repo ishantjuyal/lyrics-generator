@@ -12,11 +12,10 @@ Let's import all the libraries and classes we will need while making this projec
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout, Bidirectional
 from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.regularizers import Regularizer
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
-
-from tensorflow.keras.regularizers import Regularizer
-
+from keras.models import model_from_json
 import tensorflow.keras.utils as ku 
 import numpy as np
 
@@ -111,22 +110,21 @@ history = model.fit(predictors, label, epochs= 150, verbose=1)
 """ Save your trained model """
 
 # serialize to JSON
-# json_file = model.to_json()
-# with open(json_file_path, "w") as file:
-#    file.write(json_file)
-# # serialize weights to HDF5
-# model.save_weights(h5_file)
+json_file = model.to_json()
+with open("model.json", "w") as file:
+   file.write(json_file)
+# serialize weights to HDF5
+model.save_weights("model.h5")
 
-# """ Load your saved model """
+""" Load your saved model """
 
-# from keras.models import model_from_json
-# # load json and create model
-# file = open(json_file, 'r')
-# model_json = file.read()
-# file.close()
-# loaded_model = model_from_json(model_json)
-# # load weights
-# loaded_model.load_weights(h5_file)
+# load json and create model
+file = open('model.json', 'r')
+model_json = file.read()
+file.close()
+loaded_model = model_from_json(model_json)
+# load weights
+loaded_model.load_weights("model.h5")
 
 """Now, we will see how our model performed with each iteration."""
 
