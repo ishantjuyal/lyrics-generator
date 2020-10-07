@@ -108,6 +108,26 @@ print(model.summary())
 
 history = model.fit(predictors, label, epochs= 150, verbose=1)
 
+""" Save your trained model """
+
+# serialize to JSON
+# json_file = model.to_json()
+# with open(json_file_path, "w") as file:
+#    file.write(json_file)
+# # serialize weights to HDF5
+# model.save_weights(h5_file)
+
+# """ Load your saved model """
+
+# from keras.models import model_from_json
+# # load json and create model
+# file = open(json_file, 'r')
+# model_json = file.read()
+# file.close()
+# loaded_model = model_from_json(model_json)
+# # load weights
+# loaded_model.load_weights(h5_file)
+
 """Now, we will see how our model performed with each iteration."""
 
 import matplotlib.pyplot as plt
