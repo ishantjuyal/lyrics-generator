@@ -1,10 +1,10 @@
-# Word-Prediction
+# Lyrics Generator
 
-Developed a Word Prediction Model using LSTM. I have trained the model on Taylor Swift's Lyrics so the model could be used as a lyrics generator. You just need to provide some root words and it will predict next words to generate lyrics. 
+This is a Lyrics Generation Model trained using LSTM. The model have been trained on lyrics of many different singers. You just need to provide some root words and it will predict next words to generate lyrics. 
 
 ## Dataset
-The dataset was a txt file which cotained the lyrics of all the songs. 
-I have added several other txt files too, if you want to train the model on those and generate different models. 
+The dataset used was in the form of a txt file which contained the lyrics of all the songs of the artist. 
+This repository contains lyrics of several artists in case anyone wants to train the model on those and generate different models. 
 
 ## Performance
 
