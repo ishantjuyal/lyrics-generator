@@ -8,9 +8,13 @@ This repository contains lyrics of several artists in case anyone wants to train
 
 ## Performance
 
+Single line lyrics predicted after training on Taylor Swift lyrics
+
 ![alt text](https://github.com/ishantjuyal/Word-Prediction/blob/master/Demo/Lyrics%201.png?raw=true)
 
-![alt text](https://github.com/ishantjuyal/Word-Prediction/blob/master/Demo/Lyrics%202.png?raw=true)
+Multiple lines of lyrics generated after training on Taylor Swift lyrics
+
+![alt text](https://github.com/ishantjuyal/Lyrics-Generator/blob/master/Demo/multiple_lines.png)
 
 ## Reference
 
